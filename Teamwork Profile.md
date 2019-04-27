@@ -176,46 +176,52 @@ Conclusion of a motion, poll
 An agenda item or discussion thread or poll has ended
 * not used to indicate the end of a session, meeting, webinar
 
+Verb IRI: http://activitystrea.ms/schema/1.0/close
 
+**Sidebarred**
+Time spent on activity that is tangentially related to the meeting process or content
+* not part of the main conversational thread
 
-**Experienced**  
-User has read a document, page or paragraph. Similar to ‘interacted’ but used when the media is static or non-interactive  
-Verb IRI: http://adlnet.gov/expapi/verbs/experienced  
+**Interrupted**
+Interjected into an ongoing session activity, outwith the normal flow
+* does not necessarily entail a change in topic
+* is not necessarily a bad thing (eg. a webinar speaker may have given permission to participants to interrupt a topic with questions on-the-fly, or there might be a question raised in the text chat bar, while she was speaking
+* note that you might need to consider how to handle timestamps with text/chat interruptions eg. the time that the interruption was posted might be different from the timestamp where it became active in the conversation or the speaker noticed it
 
-**Responded**  
-User has responded to a question. Response to an item or question within a node, without moving off that node. (This is not quite the same as ‘answered’ which implies that the answer is correct.)  
-Verb IRI: http://adlnet.gov/expapi/verbs/responded  
+**Assigned**
+Delegated a task to a team member or participant by the team leader or moderator
 
-**Interacted**  
-User has interacted with or manipulated an object or a video or similar multimedia that provides some sort of interactivity. Similar to 'experienced' for when the media is dynamic, like a video. For more detailed reporting on videos, we instead recommend the use of the Video Recipe: http://id.tincanapi.com/recipe/video/base/1  
-Verb IRI: http://adlnet.gov/expapi/verbs/interacted  
+Verb IRI: http://activitystrea.ms/schema/1.0/assign
 
-**Commented**  
-User has contributed to group activity. Used when an actor adds to a group activity for a compound effect. In some ways, this is not different from ‘responded’. But the net effect is different because you are not expecting that the single activity will necessarily produce some result by itself. The object might be a discussion thread. (Or in OpenLabyrinth, we have a question format called a Cumulative Question, where users contribute phrases to a single question/database field.)  
-Verb IRI: http://adlnet.gov/expapi/verbs/commented 
+**Volunteered**
+Offered to undertake a task
+* Is not the same as voicing or putting forwards an opinion
 
-**Ignored**  
-User has ignored a flag or other scenario data. This is a flag or action sent by either a facilitator or the player engine to indicate that an action was expected by this point in time and had not occurred. Sometimes this is a good thing, and while absent, is not necessarily a negative aspect - for example, if there is a distractor in place that the actor is supposed to ignore as irrelevant.
-Verb: http://w3id.org/xapi/medbiq/verbs/ignored 
+**Asked**
+Solicited a team member to share an opinion or other contribution
+Getting clarification from the moderator
 
+Verb IRI: http://adlnet.gov/expapi/verbs/asked
 
-For the following activity statements, the Actor is more likely to be the player engine or an object within that player engine:  
+**Commented**
+This will be a very commonly used verb
 
-**Updated**  
-Player engine has changed a counter value. This may be triggered by arrival at a particular node, or by a rule within the case design created by the scenario author, or by a timer expiration point. Although the counter value may be regarded as a score, note that the ADL verb ‘scored’ is overall score for the case or exam (http://adlnet.gov/expapi/verbs/scored), which is not the same thing.  
-Verb: http://w3id.org/xapi/medbiq/verbs/updated  
+Verb IRI: http://adlnet.gov/expapi/verbs/commented
 
-**Launched**  
-Player engine has initiated an action such as redirecting the user to a new node, or triggered some other activity. This is not an action made by the user.  
+Might also use Annotated (https://w3id.org/xapi/adb/verbs/annotated)
+* it might be useful to distinguish between annotations to files/documents and comments in discussions, although there are advantages to conflating them
 
-Verb IRI: http://adlnet.gov/expapi/verbs/launched  
+Might also use Posted
 
-**Shared**  
-User has made a key resource or piece of information available to team members within a scenario activity stream.   
+Verb IRI: https://w3id.org/xapi/acrossx/verbs/posted
 
-Verb IRI: http://adlnet.gov/expapi/verbs/shared 
+* although this definition seems specific to discussion forums
+* note that in some discussion forums, you can comment on Comments, introducing a whole new stream
+* need to decide whether this constitutes the creation of a new thread or not
+* at the moment, this secondary stream is being regarded as a sub-thread
+* this is recursive so need to figure out how in the Object you are going to track this cascade of sub-threads
 
-Includes a timestamp and identifier of the node in the scenario learning design when triage step was started.   
+**Tagged**
 
 
 ## Activities 
