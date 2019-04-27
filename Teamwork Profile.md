@@ -222,28 +222,111 @@ Verb IRI: https://w3id.org/xapi/acrossx/verbs/posted
 * this is recursive so need to figure out how in the Object you are going to track this cascade of sub-threads
 
 **Tagged**
+Added or edited metadata for an object or file eg categories, keywords, descriptors
+* Such metadata is often, but not necessarily, intended for machine use
+* Not the same as Commented because metadata is often not visible as part of the regular information stream, unless specifically revealed
+
+Verb IRI: http://activitystrea.ms/schema/1.0/tag
+
+**Redacted**
+Topic or thread or comment removed from the record post hoc by the session moderator
+* we suggest that such an item be flagged as no longer visible but that it not be deleted from the system, in case it needs to be reviewed later
+
+**Ruled**
+(not sure if that is the best verb to use)
+Applied a rule of order or process to get a session or topic back on track, or to bring a verbose participant thread or conversation back
+* some systems might only allow this by the session facilitator/chair/moderator
+
+**Joined**
+A member has joined a session that has already been initialized by the moderator/facilitator
+
+Verb IRI: http://activitystrea.ms/schema/1.0/join
+
+* note that the session may not have been Opened yet since the moderator may sometimes be late in joining
+* (maybe should use Accessed instead)
+
+Verb IRI: https://w3id.org/xapi/seriousgames/verbs/accessed
+
+**Left**
+A member has left an open session
+
+Verb IRI: http://activitystrea.ms/schema/1.0/leave
+
+**Rejoined**
+Typically used after Left
+* but note that a disconnection may not be logged within the system actively as Left
+* May be difficult to discriminate from Joined in many systems
 
 
-## Activities 
-To be used mainly if there are very specific activities being described by this profile. Otherwise, Activity types usually used instead.
+**Split**
+Divided into parallel activities, such as small group discussions, concurrent threads
+* this is typically performed by the moderator/facilitator
+* this is an intentional divergence into concurrent activities, with the intention of merging again at some point
 
-## <a name="vocabulary"></a>Vocabulary
+**Forked**
+A divergence into a separate activity stream, without the specific intention to Merge or regroup
+* In team activities in computer programming, this could refer to forking into a different branch or version of the code; or it could refer to a discussion thread
 
-| Name  | Kind | IRI |
-|:------------- |:-----|:---------------|
-| Initialized |Verb| http://adlnet.gov/expapi/verbs/initialized |
-| Completed |Verb| http://adlnet.gov/expapi/verbs/completed |
-| Suspended |Verb| http://adlnet.gov/expapi/verbs/suspended |
-| Resumed |Verb| http://adlnet.gov/expapi/verbs/resumed |
-| Terminated |Verb| http://adlnet.gov/expapi/verbs/terminated |
-| Arrived |Verb| http://w3id.org/xapi/medbiq/verbs/arrived |
-| Experienced |Verb| http://adlnet.gov/expapi/verbs/experienced |
-| Responded |Verb| http://adlnet.gov/expapi/verbs/responded |
-| Interacted |Verb| http://adlnet.gov/expapi/verbs/interacted |
-| Commented |Verb| http://adlnet.gov/expapi/verbs/commented |
-| Ignored |Verb| http://w3id.org/xapi/medbiq/verbs/ignored |
-| Updated |Verb| http://w3id.org/xapi/medbiq/verbs/updated |
-| Launched |Verb| http://adlnet.gov/expapi/verbs/launched |
-| Virtual Patient |Activity Type | http://adlnet.gov/expapi/activities/simulation |
+**Merged**
+From split parallel activities back to common activity
+* See above note about Forked for programming
+
+**Uploaded**
+Contributed a file or other learning object to the common pool for the participants
+
+http://activitystrea.ms/schema/1.0/send
+
+http://activitystrea.ms/schema/1.0/submit
+
+**Downloaded**
+Collected a file or other learning object out of the common pool for the participants
+
+Verb IRI: http://id.tincanapi.com/verb/downloaded
+
+**Removed**
+Deleted a file or other learning object from the common pool for the participants
+* it might be better to flag an object as unavailable rather than truly deleting it from the object store but this decision lies with the programmers of the primary system, not the LRS activity tracking
+
+Verb IRI: http://activitystrea.ms/schema/1.0/remove
+
+**Shared**
+Changed the file access properties to include more or less participants
+
+Verb IRI: http://adlnet.gov/expapi/verbs/shared
+
+* will commonly be part of the Uploaded verb
+* some systems may not keep these separate
+
+**Edited**
+Make some change or addition to an Initialized file/document
+
+Verb IRI: https://w3id.org/xapi/acrossx/verbs/edited
+
+* this is not the same as commenting
+* some systems may demand that the file/document be Opened for editing, before this can happen; others may assume that a file/document is already Opened for editing once it has been initialized
+
+**Suggested**
+Proposed a change or addition within a version control system or change tracking system
+eg. Google Docs suggestions vs direct editing
+
+**Accepted**
+A Suggested change is incorporated into the file/document
+
+Verb IRI: http://activitystrea.ms/schema/1.0/accept 
+
+**Rejected**
+A Suggested change is removed from the file/document
+
+Verb IRI: http://activitystrea.ms/schema/1.0/reject 
+
+**Scheduled**
+Create or edit a plan or timetable for carrying out a process or procedure, giving lists of intended events and times.
+
+**Referenced**
+Cited or referred to external data or source
+
+Verb IRI: https://w3id.org/xapi/adb/verbs/referenced
+
+
 
 
