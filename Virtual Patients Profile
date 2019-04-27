@@ -1,0 +1,31 @@
+Profile: Virtual Patients
+Created by Ellen Meiselman, last modified by David Topps on Jun 18, 2016
+Version: 1.0
+Date: March 15th, 2016
+
+Author: David Topps, Ellen Meiselman, Valerie Strothers
+Author email: topps@ucalgary.ca
+
+Acknowledgements (placeholder for later – will list all working group members)
+
+Medbiquitous Virtual Patient (MVP) standard players
+Basics/Core Recommendations
+All statements include the Recipe ID in the 'category' context activity list.
+
+Most statements include an Agent with the user as the 'actor' property.
+
+Some statements may reference the System or Application as the 'actor' property where they system has updated a counter or made some other change.
+
+Most statements include the virtual patient Activity as the 'object'.
+
+All timestamps in statements must be compliant with ISO 8601 format. (this is part of the xAPI specification)
+
+Virtual patient Activity Definition includes the following:
+
+Has the 'type':http://adlnet.gov/expapi/activities/simulation 
+
+The Actor object will be defined by the virtual patient player. The Actor object for most statements with defined verbs will be of type "Agent" and MUST contain an account object.
+
+An Example of usage in a statement:
+=====================
+
