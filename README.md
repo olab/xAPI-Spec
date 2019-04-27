@@ -1,7 +1,10 @@
 # xAPI-Spec
 
-This Github repository contains the xAPI Specification. xAPI is a learning
-technologies interoperability specification that describes communication
+This Github repository contains portions of the xAPI Specification that relate to Medical Education. 
+It is based on xAPI-Spec, as published by Advanced Distributed Learning. 
+This repository arises from the efforts of the Learning Experience Working Group of Medbiquitous (http://groups.medbiq.org/medbiq/display/XIG/Learning+Experience+Group+Home)
+
+xAPI is a learning technologies interoperability specification that describes communication
 about learner activity and experiences between technologies. The specification is
 divided into three documents:
 
