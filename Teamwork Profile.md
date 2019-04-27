@@ -87,90 +87,85 @@ An example of usage in a statement:
 ``` 
 ## <a name="statements"></a>Statements
 ### Verb usage:
-**Triaged**  
-User has made a key decision within a scenario activity stream.   
 
-Verb IRI:  
 
-Includes a timestamp and identifier of the node in the scenario learning design when triage step was started.   
-
-**Assisted**  
-User has made a key contribution within a scenario activity stream. This implies that this is a team activity and that another actor has already started this activity stream.   
-
-Verb IRI:  
-
-Includes a timestamp and identifier of the node in the scenario learning design when triage step was started.   
-
-**Bookmarked**  
-User or facilitator has made a notation of an activity within a scenario activity stream. This is not the same as Suspended and may simply denote the flagging of this activity within an ongoing stream.   
-
-Verb IRI:  
-
-Includes a timestamp and identifier of the node in the scenario learning design when triage step was started.   
-
-**Coached**  
-Facilitator or actor or team leader has made a suggestion to another actor within a scenario activity stream.   
-
-Verb IRI:  
-
-Includes a timestamp and identifier of the node in the scenario learning design when triage step was started.   
-
-**Requested**  
-User has made a request to a facilitator for additional information or another resource, during a scenario activity stream. This implies that the information or resource is not immediately visible as an option within the designed scenario activity stream.   
-
-Verb IRI:  
-
-Includes a timestamp and identifier of the node in the scenario learning design when triage step was started.   
-
-**Scored**  
-Facilitator has manually assigned a score or rating to an activity within a scenario activity stream. This is different from Updated, where a score or value has been machine-assigned by the player engine or other resource (see below).  
-
-Verb IRI: http://adlnet.gov/expapi/verbs/scored 
-
-Includes a timestamp and identifier of the node in the scenario learning design when triage step was started.   
-
-**Shared**  
-User has made a key resource or piece of information available to team members within a scenario activity stream.   
-
-Verb IRI: http://adlnet.gov/expapi/verbs/shared 
-
-Includes a timestamp and identifier of the node in the scenario learning design when triage step was started.   
-
-**Cheated**  
-User has acted in an unanticipated manner within a scenario activity stream. This is a flag for an activity that the scenario designers had not considered as an option. This is not necessarily a bad thing and may represent a creative solution (viz Kobiyashi Maru scenario). 
-
-Verb IRI:  
-
-Includes a timestamp and identifier of the node in the scenario learning design when triage step was started.   
-
-(The remainder are carried over from the virtual patient profile and should be modified to suit.)
 
 **Initialized**  
-User has opened a scenario. Sent when the scenario starts to play.  
+Created the session, meeting, webinar, discussion channel
+* this is done by the moderator/facilitator/administrator
+* this may just be the booking
 
 Verb IRI: http://adlnet.gov/expapi/verbs/initialized  
 
-Includes a timestamp and identifier of the node in the scenario learning design when playing was started. Most scenarios will have a fixed starting node but this is not always true and is not a requirement for the statement to be true.  
+Includes a timestamp and identifier of the node in the scenario learning design when playing was started. 
+Most scenarios will have a fixed starting node but this is not always true and is not a requirement for the statement to be true.  
+Note that this may need several timestamps eg the meeting scheduled start time(SST), actual start time(AST)
+* note that some participants may join a session before it is Opened, since it is the moderator/facilitator who Opens the session
+* Participants may not Join a Session that has not been Initialized
 
-**Completed** 
-User has completed the scenario. Reached a node designated by the scenario learning design author as an endpoint. Does not indicate success or failure.  
-Verb IRI: http://adlnet.gov/expapi/verbs/completed  
+Note that this is not the same as Opened
+
+The Actor who initializes the session is commonly the moderator/facilitator who Opens the session
+but it does not have to be the same person.
+
+We recommend the use of ISO 8601 timestamps because time zones are a challenge for distributed teams
+
+**Opened**
+Started the session
+
+Verb IRI: http://activitystrea.ms/schema/1.0/open
+
+**Terminated**  
+Session ended unexpectedly, not as scheduled
+
+Verb IRI: http://adlnet.gov/expapi/verbs/terminated  
 
 **Suspended**
-User has paused a scenario. Suspended a scenario with the possibility to resume later.
+Session was temporarily halted e.g. tea break
+* The expectation is that the session will be resumed
+* Not used to indicate the actual end of the meeting
+* Not used to indicate that a member has left an ongoing session
+
 Verb IRI: http://adlnet.gov/expapi/verbs/suspended  
 
 **Resumed**  
-User has restarted a scenario. Resumed a scenario that had been previously suspended.  
+The session was restarted after a suspension
+* Not used to indicate that a member has rejoined an ongoing session
+
 Verb IRI: http://adlnet.gov/expapi/verbs/resumed  
 
-**Terminated**  
-User has left a scenario and does not intend to resume. Consider how you will be able to differentiate this from ‘abandoned’, 'suspended' or 'completed' because the player engine may not be able to determine whether the user is coming back again.  
-Verb IRI: http://adlnet.gov/expapi/verbs/terminated  
+**Completed** 
+Session ended in expected fashion, as scheduled
 
-**Arrived***  
-User has visited a node within the scenario. Not necessarily same as 'read' or ‘experienced’ because an internal rule or trigger might immediately bounce them on to another node or activity. (See ‘Launched’). So, while the user may have landed on that node, if they are immediately redirected, they may not even see that page/node. Can be used for a physical or virtual location.  
-Verb IRI:  http://w3id.org/xapi/medbiq/verbs/arrived  
+Verb IRI: http://adlnet.gov/expapi/verbs/completed  
+
+**Proposed**
+Putting forward a motion, agenda item, discussion thread or poll
+
+**Seconded**
+Similar to Proposed and in many contexts, has to be preceded by Proposed
+* a required action for some objects eg. a motion
+
+**Voted**
+Action in support of or against a proposed motion, or in a poll
+* note that motions tend to be binary choices but polls can have many different options or structural types
+* note that polls may be similar to Questions in some other activities (eg. see Virtual Patient Profile)
+* not the same as 'decided', which would be the cause of some future action or activity.
+
+**Agreed**
+Reached consensus over a proposed issue, agenda item or action
+http://activitystrea.ms/schema/1.0/agree
+
+**Decided**
+Conclusion of a motion, poll
+* we suggest that in many situations, it is better to precede this verb with a definite call to action. 
+* Using 'Decided' as a way of indicating that a discussion thread or conversation has come to a conclusion is risky in many contexts
+
+**Closed**
+An agenda item or discussion thread or poll has ended
+* not used to indicate the end of a session, meeting, webinar
+
+
 
 **Experienced**  
 User has read a document, page or paragraph. Similar to ‘interacted’ but used when the media is static or non-interactive  
@@ -203,6 +198,14 @@ Verb: http://w3id.org/xapi/medbiq/verbs/updated
 Player engine has initiated an action such as redirecting the user to a new node, or triggered some other activity. This is not an action made by the user.  
 
 Verb IRI: http://adlnet.gov/expapi/verbs/launched  
+
+**Shared**  
+User has made a key resource or piece of information available to team members within a scenario activity stream.   
+
+Verb IRI: http://adlnet.gov/expapi/verbs/shared 
+
+Includes a timestamp and identifier of the node in the scenario learning design when triage step was started.   
+
 
 ## Activities 
 To be used mainly if there are very specific activities being described by this profile. Otherwise, Activity types usually used instead.
