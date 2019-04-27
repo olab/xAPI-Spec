@@ -24,6 +24,17 @@ Note that certain structural objects or events are regarded as equivalent in thi
 So for tracking activities, it is reasonable to regard a meeting as the same kind of atomic object as a webinar etc. 
 For Discussion Forums, this might not be so clear and worth some discussion.
 
+| Event/object  | Sub-object | Notes |
+|:------------- |:-----|:---------------|
+| session | topic |   |
+| meeting | agenda item |   |
+| webinar | topic |   |
+| discussion channel | thread| Not all forums are set up this way |
+| notebook |document| http://adlnet.gov/expapi/verbs/terminated |
+| MOOC | topic | Assessment of participation & contributions has been hard. Would be good to have a way to data inform the facilitators 
+
+
+
 >### Basics/Core Recommendations
 * Most statements include an Agent with the user as the 'actor' property.
 * All timestamps in statements must be compliant with ISO 8601 format. (this is part of the xAPI specification) 
