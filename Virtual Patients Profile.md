@@ -1,9 +1,10 @@
 # Experience API Virtual Patient Profile
 
 ## Medbiquitous Learning Experience Working Group
-
+Authors: David Topps, Ellen Meiselman, Valerie Strothers
 > Licensed under Creative Commons, Attribution ( CC BY)
->
+> We acknowledge the contributions of the Medbiquitous Learning Experience Working Group
+> in the creation of these documents. 
 ## Table of Contents
 [Recipes](#recipes)
 [Vocabulary](#vocabulary)
