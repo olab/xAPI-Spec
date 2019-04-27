@@ -2,8 +2,6 @@
 
 ## Medbiquitous Learning Experience Working Group
 
->"Copyright 2016 .....
-
 > Licensed under Creative Commons, Attribution ( CC BY)
 >
 ## Table of Contents
@@ -12,6 +10,8 @@
 
 ## <a name="recipes"></a>Recipes
 Can be categorized by situation type or by activity type, or whatever makes sense in context. 
+The concept of Recipes was originated by Andrew Downes at Rustici Software.
+Recipes are being deprecated in future versions of xAPI. 
 ### Medbiquitous Virtual Patient (MVP) standard players
 >### Basics/Core Recommendations
 * All statements include the Recipe ID in the 'category' context activity list.
