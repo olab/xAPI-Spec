@@ -114,7 +114,7 @@ Verb IRI: http://activitystrea.ms/schema/1.0/open
 Not just journal articles. Any scholarly output that is made available to a group via a publication or distribution mechanism
 This includes scholarly materials that are needed but not made public e.g. Exams or questions or cases that are kept within a private repository. While the content may be kept private, it is recommended that for validation purposes, the activity metadata is made available for scrutiny
 
-Verb IRI: http://adlnet.gov/expapi/verbs/terminated  
+Verb IRI: https://w3id.org/xapi/dod-isd/verbs/published
 
 **Granted**
 Activities relating to a Grant
@@ -123,14 +123,15 @@ Activities relating to a Grant
 * Reviewed
 Generally relates to Grant work but the past tense of ‘Granted’ tends to imply that you were successful
 
-Verb IRI: http://adlnet.gov/expapi/verbs/suspended  
+Verb IRI: 
 
 **Presented**  
 Suggests a live action component. Does not need to be face-to-face. Can be online or broadcast
 * Includes seminars, webinars, keynotes, conference oral presentations, posters
 * Context, audience etc could be specified within the Object clause, or within the associated Activity Resource Profile
 
-Verb IRI: http://adlnet.gov/expapi/verbs/resumed  
+Verb IRI: https://w3id.org/xapi/dod-isd/verbs/reported
+The above verb is close and might suffice
 
 **Patented** 
 Activities relating to a Patent
@@ -138,7 +139,7 @@ Activities relating to a Patent
 * Received
 High enough value for its own verb
 
-Verb IRI: http://adlnet.gov/expapi/verbs/completed  
+Verb IRI: 
 
 **Awarded**
 Activities relating to an award and honours
@@ -147,3 +148,7 @@ Activities relating to an award and honours
 * Applied for an award
 * Nominated for an award
 
+**Administered**
+Activities relating to manage and be responsible for the operation or use of a resource, team, organization, etc.
+
+Verb IRI: https://w3id.org/xapi/dod-isd/verbs/administered
